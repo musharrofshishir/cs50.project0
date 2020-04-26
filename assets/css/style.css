@@ -7,6 +7,10 @@ body {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .custom-navbar {
   padding-top: 40px;
   padding-bottom: 20px;
