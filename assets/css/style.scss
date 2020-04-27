@@ -15,6 +15,9 @@ $font2:  'Roboto', sans-serif;;
 body{
     height:100%;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 .custom-navbar{
     padding-top: 40px;
@@ -188,3 +191,93 @@ footer{
 
 
 // ABOUT PAGE STYLING
+
+#about-header{
+    background-color: #ef8ad2;
+}
+
+
+//SERVICE PAGE STYLING
+
+#service-header{
+    background-color:#071012;
+    .service-table{
+        table{
+            color: $white;
+            width: 100%;
+            border-collapse: separate;
+            tr{
+                font-family: $font2;
+                th{
+                    font-family: $font-header;
+                    font-size: 24px;
+                    padding: 10px 0;
+                }
+                td{
+                    margin: 10px 0;
+                    padding: 5px;
+                }
+                &:nth-child(even){
+                    background-color: #4d4b4b3b;
+                }
+            }
+        }
+    }
+}
+
+//CONTACT PAGE STYLING
+.custom-btn2 {
+    @extend .custom-btn;
+    color: #060505;
+    border: 3px solid #000000;
+    border-radius: 0;
+    &:hover{
+        color: $white;
+        text-decoration: none;
+        background-color: black;
+        transition-timing-function: ease-in-out;
+    }
+}
+#contact-header{
+    background-color: #434447;
+}
+
+.contact-wrapper{
+    @extend .second-wrapper;
+    .contact-wrap{
+        .contact-form{
+            form{
+                background-color: $white;
+                border-radius: 7px;
+                padding: 70px 100px;
+                input[type = "text"]{
+                    border-radius: 0px;
+                    margin-bottom: 25px;
+                    &::placeholder{
+                        font-family: $font2;
+                    }
+                    &:focus{
+                        border-color: #40fa57;
+                        box-shadow: none;
+                        outline: none;
+                    }
+                }
+                label{
+                    font-family: $font2;
+                }
+                input[type= "email"]{
+                    @extend input[type = "text"];
+                    margin-top: 25px;
+                }
+                .custom-control-input:checked~.custom-control-label::before {
+                    color: #fff;
+                    border-color: #4bff72;
+                    background-color: #40ff57;
+                    box-shadow: none;
+                    outline: none;
+                }
+
+            }
+        }
+    }
+}
